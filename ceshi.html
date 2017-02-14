@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="./loader.js"></script> 
+</head>
+<body>
+
+<script>
+
+momo.config({
+	"base":"./",
+	"comboSyntax":["!!", ","]
+});
+
+define("main/loader-test/index", ["lib/test1/index","lib/test2/index"], function(require, exports, module) {
+
+	var test1=require("lib/test1/index");
+	var test2=require("lib/test2/index");
+	test1.Init();
+	test2.Init();
+
+})
+
+</script>
+
+</body>
+</html>
